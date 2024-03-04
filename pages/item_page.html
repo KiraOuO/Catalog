@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Item Page</title>
     <link href="../styles/index.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,148 +10,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="navbar">
+<div class="navbar-item">
+    <img src="../img/back_arrow.png" alt="Back" class="back-arrow">
     <div class="logo">
-        <img src="../img/logo.png" alt="logo">
-        <p>Luxe</p>
-        <div class="search">
+        <div class="logo-img-text">
+            <img src="../img/logo.png" alt="logo">
+            <p>Luxe</p>
+        </div>
+        <div class="search-item">
             <img src="../img/search.png" alt="search-icon">
             <input type="text" placeholder="Search...">
         </div>
     </div>
-    <div class="top-button">
-        <button class="like-button">
-            <img src="../img/wishlist.png" alt="like-button">
-        </button>
-        <button class="cart-button">
-            <img src="../img/cart.png" alt="cart-button">
-        </button>
-    </div>
+
 </div>
-    <div class="main-container">
-        <div class="product-details">
-            <div class="product-image">
-                <img src="../img/item_page.png" alt="Product Image">
-            </div>
-            <div class="product-info">
-                <p class="brand">Brand: Brand Name</p>
-                <p class="product-name">Product Name</p>
-                <p class="description">Description Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                <div class="rating">
-                    <div class="stars">
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9734;</span>
-                    </div>
-                </div>
-                <div class="ratings-details">
-                    <div class="rating-bar-wrapper">
-                        <div class="rating-bar star5"></div>
-                        <span class="rating-percentage">75%</span>
-                    </div>
-                    <div class="rating-bar-wrapper">
-                        <div class="rating-bar star4"></div>
-                        <span class="rating-percentage">15%</span>
-                    </div>
-                    <div class="rating-bar-wrapper">
-                        <div class="rating-bar star3"></div>
-                        <span class="rating-percentage">5%</span>
-                    </div>
-                    <div class="rating-bar-wrapper">
-                        <div class="rating-bar star2"></div>
-                        <span class="rating-percentage">3%</span>
-                    </div>
-                    <div class="rating-bar-wrapper">
-                        <div class="rating-bar star1"></div>
-                        <span class="rating-percentage">2%</span>
-                    </div>
-                </div>
-
-                <div class="comments">
-                    <div class="comment">
-                        <img src="../img/avatar1.png" alt="Avatar" class="avatar">
-                        <div class="comment-details">
-                            <p class="user-name">John Doe</p>
-                            <div class="rating">
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                            </div>
-                            <p class="comment-text">Great product! I love the quality and design.</p>
-                        </div>
-                    </div>
-
-                    <div class="comment">
-                        <img src="../img/avatar2.png" alt="Avatar" class="avatar">
-                        <div class="comment-details">
-                            <p class="user-name">Jane Smith</p>
-                            <div class="rating">
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                                <span class="star">&#9734;</span>
-                            </div>
-                            <p class="comment-text">Nice product. Could be better with more color options.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="details-table">
-                    <p class="all-products">Details</p>
-                    <table>
-                        <tr>
-                            <td class="label">Brand</td>
-                            <td class="value">Brand Name</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Color</td>
-                            <td class="value">Black</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Width</td>
-                            <td class="value">100 cm</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Material</td>
-                            <td class="value">Cotton</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Type</td>
-                            <td class="value">T-shirt</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Height</td>
-                            <td class="value">50 cm</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+<div class="main-container">
+    <div class="breadcrumbs">
+        <span><a href="../index.html">Home</a> /</span> Item
+    </div>
+    <div class="product-details">
+        <div class="product-image">
+            <img src="../img/item_page.png" alt="Product Image">
         </div>
-        <div class="related-products">
-            <p class="all-products">You May Also Like:</p>
-            <div class="product-card">
-                <img src="../img/card_item2.png" alt="Related Product Image">
-                <p>Related Product 1</p>
-                <p class="price">$50</p>
-            </div>
-            <div class="product-card">
-                <img src="../img/card_item3.png" alt="Related Product Image">
-                <p>Related Product 2</p>
-                <p class="price">$60</p>
-            </div>
-            <div class="product-card">
-                <img src="../img/card_item4.png" alt="Related Product Image">
-                <p>Related Product 3</p>
-                <p class="price">$70</p>
-            </div>
+        <div class="product-info">
+            <h2>Brand Name</h2>
+            <h1>Product Name</h1>
+            <p class="price">$100</p>
         </div>
     </div>
-
+    <p class="all-products">You May Also Like:</p>
+    <div class="related-products">
+        <div class="product-card">
+            <img src="../img/card_item2.png" alt="Related Product Image">
+            <p>Related Product 1</p>
+            <p class="price">$50</p>
+        </div>
+        <div class="product-card">
+            <img src="../img/card_item3.png" alt="Related Product Image">
+            <p>Related Product 2</p>
+            <p class="price">$60</p>
+        </div>
+        <div class="product-card">
+            <img src="../img/card_item4.png" alt="Related Product Image">
+            <p>Related Product 3</p>
+            <p class="price">$70</p>
+        </div>
+    </div>
 </div>
 </body>
 </html>
