@@ -23,10 +23,15 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--body-color);
     border-bottom: 1px solid var(--search-text-color);
     margin-bottom: 20px;
+    box-sizing: border-box;
+}
 
+.navbar-item .arrow {
+    display: none;
 }
 
 .logo {
@@ -88,77 +93,41 @@ body {
     font-size: 16px;
 }
 
+.sign-up-mobile {
+    display: none;
+}
+
+.sign-up, .sign-up-mobile  {
+    margin-right: 40px;
+}
+
+.sign-up button, .sign-up-mobile button {
+    background-color: var(--search-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.sign-up a, .sign-up-mobile a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.sign-up button:hover, .sign-up-mobile:hover {
+    background-color: var(--button-color);
+}
+
+
 /* Стили для основного контейнера */
 
 .main-container {
     margin-left: 160px;
     margin-right: 160px;
-}
-
-/* Стили для блока "Deals of the Day" */
-
-.deals-of-the-day {
-    color: var(--text-color);
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 40px;
-}
-
-.deal-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 320px;
-}
-
-.deal-image {
-    width: 496px;
-    height: 279px;
-}
-
-.deal-text {
-    width: 50%;
-    text-align: center;
-}
-
-.deal-text p {
-    text-align: center;
-    font-size: 48px;
-    font-weight: bold;
-    margin-left: 400px;
-}
-
-.shop-now-button {
-    display: block;
-    background-color: var(--button-color);
-    color: var(--text-color);
-    text-align: center;
-    text-decoration: none;
-    border-radius: 12px;
-    justify-content: center;
-    padding: 20px 20px 20px 20px;
-    margin-left: 400px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.category {
-    margin-bottom: 20px;
-    font-size: 22px;
-    font-weight: bold;
-}
-.category-list {
-    display: flex;
-    margin-top: 10px;
-}
-.category-item {
-    margin-right: 16px;
-    background-color: var(--search-color);
-    text-align: center;
-    border-radius: 12px;
-    padding: 12px;
-    font-size: 14px;
-    font-weight: bolder;
 }
 
 .all-products {
@@ -313,17 +282,95 @@ body {
     color: var(--price-color);
 }
 
+.sign-in-container {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
 
+.sign-in-container h2 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-container label {
+    display: grid;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.input-field {
+    background-color: var(--body-color);
+    width: 480px;
+    height: 36px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.input-container input::placeholder {
+    color: #96824F;
+}
+
+/* Adjust the position of the "Forgot password?" link */
+.forgot-password {
+    text-align: left;
+    color: #96824F;
+    margin-top: 16px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.forgot-password a {
+    text-decoration: none;
+    color: #96824F;
+}
+
+.sign-in-btn, .sign-up-btn {
+    background-color: #DE9921;
+    color: var(--text-color);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.sign-up-btn {
+    background-color: var(--search-color);
+    color: var(--text-color);
+}
+
+.sign-up-btn:hover {
+    background-color: var(--button-color);
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: var(--search-color);
+    transition: background-color 0.3s ease;
+}
+
+.no-account {
+    color: #96824F;
+    font-size: 16px
+}
 
 @media (max-width: 1024px) {
     .product-container {
         grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 941px) {
-    .navbar-item .back-arrow {
-        display: none;
     }
 }
 
@@ -338,6 +385,7 @@ body {
     .logo-img-text {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
 
     .logo-img-text img {
@@ -353,6 +401,15 @@ body {
     .navbar {
         flex-direction: column;
         align-items: center;
+    }
+
+    .navbar .sign-up {
+        display: none;
+    }
+
+    .navbar .sign-up-mobile {
+        display: block;
+        margin-top: 10px;
     }
 
     .main-container {
@@ -384,6 +441,10 @@ body {
         align-items: center;
         flex-direction: row;
         justify-content: center;
+    }
+
+    .navbar-item .arrow {
+        display: block;
     }
 
     .navbar-item .back-arrow {
@@ -421,8 +482,29 @@ body {
     .product-info .price {
         font-size: 16px;
     }
+
+    .navbar-item .sign-up {
+        display: none;
+    }
 }
 
+@media (min-width: 320px) and (max-width: 375px){
+    .input-field {
+        width: 280px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 425px){
+    .input-field {
+        width: 340px;
+    }
+}
+
+@media (min-width: 260px) and (max-width: 280px){
+    .input-field {
+        width: 244px;
+    }
+}
 
 @media (max-width: 440px) {
     .product-container {
