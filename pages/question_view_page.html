@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Question</title>
+    <link href="../styles/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="navbar-item">
+    <a href="../index.html" class="arrow"><img src="../img/back_arrow.png" alt="Back" class="back-arrow"></a>
+    <div class="logo">
+        <div class="logo-img-text">
+            <img src="../img/logo.svg" alt="logo">
+        </div>
+        <div class="search-item">
+            <img src="../img/search.png" alt="search-icon">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+    <div class="sign-up">
+        <button><a href="authorization.html">Sign Up</a></button>
+    </div>
+</div>
+<div class="main-container">
+    <div class="header">
+        <h1>Questions</h1>
+        <h2>Filters</h2>
+        <div class="search-container">
+            <label for="search">Search</label>
+            <input type="text" id="search" placeholder="Type here to search...">
+        </div>
+        <div class="subject-container">
+            <label for="subject">Subject</label>
+            <select class="subject-filter" id="subject">
+                <option value="">Select a subject</option>
+                <option value="option1">Order</option>
+                <option value="option2">Payment</option>
+                <option value="option3">Delivery</option>
+                <option value="option4">Another</option>
+            </select>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="processed" name="processed">
+            <label for="processed">Show only unprocessed questions</label>
+        </div>
+        <button class="filter-btn">Filter questions</button>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Subject</th>
+                <th>Is Processed</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>#1234</td>
+                <td class="subject-text"><p>Order</p></td>
+                <td class="processed-text"><p>Processed</p></td>
+                <td>johndoe@gmail.com</td>
+                <td><a href="#" class="view-button">View</a></td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td>#1235</td>
+                <td class="subject-text"><p>Payment</p></td>
+                <td class="processed-text"><p>Unprocessed</p></td>
+                <td>janedoe@gmail.com</td>
+                <td><a href="#" class="view-button">View</a></td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td>#1236</td>
+                <td class="subject-text"><p>Delivery</p></td>
+                <td class="processed-text"><p>Processed</p></td>
+                <td>johnsmith@gmal.com</td>
+                <td><a href="#" class="view-button">View</a></td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td>#1237</td>
+                <td class="subject-text"><p>Another</p></td>
+                <td class="processed-text"><p>Processed</p></td>
+                <td>janemith@gmail.com</td>
+                <td><a href="#" class="view-button">View</a></td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td>#1238</td>
+                <td class="subject-text"><p>Another</p></td>
+                <td class="processed-text"><p>Unprocessed</p></td>
+                <td>johnjones@gmail.com</td>
+                <td><a href="#" class="view-button">View</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination">
+        <img src="../img/left_arrow.png" alt="left-arrow"/>
+        <a href="#" class="active">1</a>
+        <img src="../img/right_arrow.png" alt="right-arrow"/>
+    </div>
+</div>
+</body>
+</html>

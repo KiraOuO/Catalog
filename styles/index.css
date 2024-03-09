@@ -155,7 +155,7 @@ body {
 
 .pagination {
     clear: both;
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -448,7 +448,7 @@ label {
 .email {
     width: 580px;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid #ccc;
     font-size: 16px;
     margin-top: 16px;
@@ -499,6 +499,241 @@ textarea {
 .submit:hover {
     background-color: var(--search-color);
 }
+
+/*Question View Page*/
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.header h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.search-container, .subject-container, .checkbox-container {
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.search-container input, .subject-filter {
+    width: 460px;
+    height: 36px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    background-color: transparent;
+}
+
+.subject-filter {
+    width: 480px;
+    height: 54px;
+    background-color: transparent;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    margin-top: 8px;
+}
+
+.filter-btn {
+    background-color: #DE9921;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 480px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th:last-child {
+    border-radius: 0 12px 0 0;
+}
+
+.table-container th:first-child {
+    border-radius: 12px 0 0 0;
+}
+
+
+th, td {
+    padding: 8px;
+}
+
+.table-container {
+    border: 1px solid var(--search-text-color);
+    border-radius: 12px;
+}
+
+th {
+    color: var(--text-color);
+    text-align: left;
+}
+
+th, td {
+    padding: 16px;
+    border-bottom: 1px solid var(--search-text-color);
+}
+
+.table-container tbody:last-child tr:last-child td {
+    border-bottom: none;
+}
+
+.view-button {
+    text-decoration: none;
+    color: var(--price-color);
+}
+
+.subject-text p, .processed-text p {
+    background-color: var(--button-color);
+    color: white;
+    padding: 6px;
+    border-radius: 20px;
+    width: 120px;
+    text-align: center;
+}
+
+/*Questions Answers Page*/
+
+/*Table*/
+
+.question-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.grid-container > * {
+    padding: 8px;
+}
+
+.id, .message, .processed {
+    grid-column: span 1;
+}
+
+.subject, .time, .email-grid {
+    grid-column: span 1;
+}
+
+.grid-container > .id-title,
+.grid-container > .subject-title {
+    border-top: 1px solid var(--search-text-color);
+    color: var(--search-text-color);
+}
+
+.grid-container > .message-title,
+.grid-container > .time-title {
+    border-top: 1px solid var(--search-text-color);
+    color: var(--search-text-color);
+}
+
+.grid-container > .processed-title,
+.grid-container > .email-grid-title {
+    border-top: 1px solid var(--search-text-color);
+    color: var(--search-text-color);
+}
+
+/*Reply Box*/
+
+.reply-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.reply-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reply-box label {
+    margin-bottom: 4px;
+}
+
+.message-answer {
+    width: 49%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 16px;
+    background-color: transparent;
+    height: 124px;
+}
+
+.send-answer {
+    align-self: flex-start;
+    margin-top: 10px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+    color: var(--text-color);
+}
+
+.reply-button {
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+}
+
+.subject-answer {
+    width: 49%;
+    height: 54px;
+    background-color: transparent;
+    border-radius: 12px;
+    font-size: 16px;
+    padding-left: 12px;
+    border: 1px solid var(--search-text-color);
+}
+
+.header p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/*Medias requests*/
 
 
 @media (max-width: 1024px) {
