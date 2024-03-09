@@ -44,21 +44,9 @@ body {
     margin-left: 40px;
 }
 
-.logo-img-text {
-    display: flex;
-    flex-direction: row;
-    margin-right: 20px;
-}
-
-.logo-img-text img {
-    margin-top: 21px;
-}
-
-
 .logo img {
-    margin-right: 16px;
-    width: 16px;
-    height: 16px;
+    width: 86px;
+    height: 86px;
     font-weight: bold;
 }
 
@@ -368,6 +356,151 @@ body {
     font-size: 16px
 }
 
+/*Successful Page*/
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.center-content img {
+    width: 480px;
+    height: 218px;
+}
+
+.center-content .mobile-picture {
+    display: none;
+}
+
+.center-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mobile-title {
+    display: none;
+}
+
+.center-content .text {
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+}
+
+.mobile-text {
+    display: none;
+}
+
+.resend-btn {
+    background-color: #DE9921;
+    color: var(--text-color);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 480px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.open-email-btn {
+    display: none;
+}
+
+/*Contact Us Page*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.form-group textarea,
+.email {
+    width: 580px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 16px;
+    background-color: transparent;
+}
+
+.form-group textarea {
+    height: 144px;
+}
+
+.email {
+    height: 36px;
+}
+
+.form-group select {
+    width: 600px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 16px;
+    background-color: transparent;
+}
+
+textarea {
+    resize: none;
+}
+
+.char-count {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.submit {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit:hover {
+    background-color: var(--search-color);
+}
+
+
 @media (max-width: 1024px) {
     .product-container {
         grid-template-columns: repeat(3, 1fr);
@@ -380,17 +513,6 @@ body {
         align-items: center;
         margin-left: 0;
         flex-direction: column;
-    }
-
-    .logo-img-text {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .logo-img-text img {
-        margin-right: 0;
-        margin-top: 21px;
     }
 
     .search, .search-item {
@@ -420,9 +542,7 @@ body {
     .product-container {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-@media (max-width: 940px){
     .search-item {
         display: none;
     }
@@ -441,6 +561,7 @@ body {
         align-items: center;
         flex-direction: row;
         justify-content: center;
+        margin-right: 20px;
     }
 
     .navbar-item .arrow {
@@ -455,10 +576,6 @@ body {
         margin-top: 21px;
     }
 
-    .navbar-item .logo-img-text {
-        margin-top: 21px;
-        justify-content: center;
-    }
     .product-details {
         flex-direction: column;
     }
@@ -488,9 +605,125 @@ body {
     }
 }
 
+@media (max-width: 540px) {
+    /*Success Page*/
+
+    .center-content {
+        margin-top: 10px;
+    }
+
+    .center-content img {
+        width: 358px;
+        height: 457px;
+        border-radius: 12px;
+    }
+
+    .center-content .mobile-picture {
+        display: block;
+    }
+
+    .center-content .web-picture {
+        display: none;
+    }
+
+    .center-content h2 {
+        font-size: 24px;
+    }
+
+    .center-content .text {
+        font-size: 14px;
+    }
+
+    .resend-btn, .open-email-btn {
+        width: 320px;
+        margin-top: 10px;
+    }
+
+    .open-email-btn {
+        display: block;
+        background-color: var(--search-color);
+        color: var(--text-color);
+        border: none;
+        border-radius: 12px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .web-title {
+        display: none;
+    }
+
+    .mobile-title {
+        display: block;
+    }
+
+    .mobile-text {
+        display: block;
+    }
+
+    .web-text {
+        display: none;
+    }
+
+    /*Contact Us Page*/
+
+    .form-group textarea,
+    .email {
+        width: 428px;
+    }
+
+    .form-group select {
+        width: 448px;
+    }
+
+    .submit {
+        width: 448px;
+    }
+
+    .checkbox-label {
+        word-wrap: break-word;
+        font-size: 14px;
+    }
+
+}
+
 @media (min-width: 320px) and (max-width: 375px){
     .input-field {
         width: 280px;
+    }
+
+    /*Success Page*/
+
+    .center-content img {
+        width: 308px;
+    }
+
+    .resend-btn, .open-email-btn {
+        width: 310px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /*Contact Us Page*/
+
+    .form-group textarea,
+    .email {
+        width: 288px;
+    }
+
+    .form-group select {
+        width: 308px;
+    }
+
+    .submit {
+        width: 308px;
+    }
+
+    .checkbox-label {
+        word-wrap: break-word;
+        font-size: 11px;
     }
 }
 
@@ -498,11 +731,65 @@ body {
     .input-field {
         width: 340px;
     }
+
+    /*Contact Us Page*/
+
+    .form-group textarea,
+    .email {
+        width: 348px;
+    }
+
+    .form-group select {
+        width: 368px;
+    }
+
+    .submit {
+        width: 368px;
+    }
+
+    .checkbox-label {
+        word-wrap: break-word;
+        font-size: 14px;
+    }
+
 }
 
-@media (min-width: 260px) and (max-width: 280px){
+@media (min-width: 260px) and (max-width: 319px){
     .input-field {
         width: 244px;
+    }
+
+    /*Success Page*/
+
+    .center-content img {
+        width: 268px;
+    }
+
+    .resend-btn, .open-email-btn {
+        width: 268px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /*Contact Us Page*/
+
+    .form-group textarea,
+    .email {
+        width: 238px;
+    }
+
+    .form-group select {
+        width: 258px;
+    }
+
+    .submit {
+        width: 258px;
+    }
+
+    .checkbox-label {
+       max-width: 258px;
+       word-wrap: break-word;
+       font-size: 11px;
     }
 }
 
