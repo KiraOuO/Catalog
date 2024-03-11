@@ -8,23 +8,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../js/index.js" defer></script>
 </head>
 <body>
 <div class="navbar-item">
     <a href="../index.html" class="arrow"><img src="../img/back_arrow.png" alt="Back" class="back-arrow"></a>
     <div class="logo">
         <div class="logo-img-text">
-            <img src="../img/logo.svg" alt="logo">
+            <img src="../img/gts_logo.png" alt="logo">
         </div>
         <div class="search-item">
             <img src="../img/search.png" alt="search-icon">
             <input type="text" placeholder="Search...">
         </div>
     </div>
-    <div class="sign-up">
-        <button><a href="authorization.html">Sign Up</a></button>
+    <div class="top-button">
+        <!--        Mobile Button-->
+
+        <button class="cart-button mobile-button">
+            <img src="../img/home.svg" alt="cart-button">
+        </button>
+
+
+        <button class="cart-button">
+            <img src="../img/cart.svg" alt="cart-button">
+        </button>
+
+
+        <!--        Mobile Button-->
+
+        <button class="cart-button mobile-button">
+            <img src="../img/contact_us.svg" alt="cart-button">
+        </button>
+
+
+        <button class="like-button cart-button">
+            <img src="../img/account.svg" alt="like-button">
+        </button>
+        <div class="dropdown">
+            <ul class="dropdown__items">
+                <li><img src="../img/setting.svg" alt="Setting" class="dropdown-icon"><a href="#">Setting</a></li>
+                <li><img src="../img/logout.svg" alt="LogOut" class="dropdown-icon"><a href="#">LogOut</a></li>
+            </ul>
+        </div>
     </div>
+
+    <!--    <div class="sign-up">-->
+    <!--        <button><a href="../pages/authorization.html">Sign Up</a></button>-->
+    <!--        <button class="login"><a href="../pages/authorization.html">Log In</a></button>-->
+    <!--    </div>-->
+
+
 </div>
+
+
 <div class="main-container">
     <div class="container">
         <h1>Contact Us</h1>
@@ -60,6 +97,7 @@
             </div>
         </form>
     </div>
+    <div class="footer"></div>
 </div>
 </body>
 </html>

@@ -558,7 +558,6 @@ h1 {
 .form-container {
     width: 100%;
     max-width: 600px;
-    padding: 20px;
     border-radius: 12px;
 }
 
@@ -860,6 +859,12 @@ th, td {
     font-weight: bold;
 }
 
+/*Footer*/
+
+.footer {
+    height: 100px;
+}
+
 
 /*Medias requests*/
 
@@ -1005,7 +1010,7 @@ th, td {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: calc(100% - 39px);
+        width: calc(100% - 38px);
         padding: 10px 20px 10px 20px;
         background-color: var(--body-color);
         border-radius: 12px 12px 0 0;
