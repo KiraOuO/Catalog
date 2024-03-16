@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order History</title>
+    <link href="../styles/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../js/index.js" defer></script>
+</head>
+<body>
+<div class="navbar-item">
+    <a href="../index.html" class="arrow"><img src="../img/back_arrow.png" alt="Back" class="back-arrow"></a>
+    <div class="logo">
+        <div class="logo-img-text">
+            <img src="../img/gts_logo.png" alt="logo">
+        </div>
+        <div class="search-item">
+            <img src="../img/search.png" alt="search-icon">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+    <div class="top-button">
+        <!--        Mobile Button-->
+
+        <button class="cart-button mobile-button">
+            <img src="../img/home.svg" alt="cart-button">
+        </button>
+
+
+        <button class="cart-button">
+            <img src="../img/cart.svg" alt="cart-button">
+        </button>
+
+
+        <!--        Mobile Button-->
+
+        <button class="cart-button mobile-button">
+            <img src="../img/contact_us.svg" alt="cart-button">
+        </button>
+
+
+        <button class="like-button cart-button">
+            <img src="../img/account.svg" alt="like-button">
+        </button>
+        <div class="dropdown">
+            <ul class="dropdown__items">
+                <li><img src="../img/setting.svg" alt="Setting" class="dropdown-icon"><a href="#">Setting</a></li>
+                <li><img src="../img/logout.svg" alt="LogOut" class="dropdown-icon"><a href="#">LogOut</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main-container">
+    <h1 class="cart-title">
+        Your Orders
+    </h1>
+    <div class="cart-item">
+        <div class="product-info-cart">
+            <div class="order-history-img-container">
+                <img src="../img/order_history.png" alt="Product Image" class="order-history-img">
+            </div>
+            <div class="cart-description">
+                <p class="product-name">Order #12345</p>
+                <div class="decoration-text">
+                    <p class="price-cart order-history-description">Delivered Jun 28, 2023</p>
+                </div>
+            </div>
+        </div>
+        <div class="quantity-controls">
+            <a href="#"><img src="../img/right_arrow.png" alt="order-photo"></a>
+        </div>
+    </div>
+    <div class="cart-item">
+        <div class="product-info-cart">
+            <div class="order-history-img-container">
+                <img src="../img/order_history.png" alt="Product Image" class="order-history-img">
+            </div>
+            <div class="cart-description">
+                <p class="product-name">Order #12345</p>
+                <div class="decoration-text">
+                    <p class="price-cart order-history-description">Delivered Jun 28, 2023</p>
+                </div>
+            </div>
+        </div>
+        <div class="quantity-controls">
+            <a href="#"><img src="../img/right_arrow.png" alt="order-photo"></a>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

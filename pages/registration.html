@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link href="../styles/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="navbar-item">
+    <a href="../index.html" class="arrow"><img src="../img/back_arrow.png" alt="Back" class="back-arrow"></a>
+    <div class="logo">
+        <div class="logo-img-text">
+            <img src="../img/gts_logo.png" alt="logo">
+        </div>
+        <div class="search-item">
+            <img src="../img/search.png" alt="search-icon">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+    <div class="top-button">
+        <!--        Mobile Button-->
+
+        <button class="cart-button mobile-button">
+            <img src="../img/home.svg" alt="cart-button">
+        </button>
+
+
+        <button class="cart-button">
+            <img src="../img/cart.svg" alt="cart-button">
+        </button>
+
+
+        <!--        Mobile Button-->
+
+        <button class="cart-button mobile-button">
+            <img src="../img/contact_us.svg" alt="cart-button">
+        </button>
+
+
+        <button class="like-button cart-button">
+            <img src="../img/account.svg" alt="like-button">
+        </button>
+        <div class="dropdown">
+            <ul class="dropdown__items">
+                <li><img src="../img/setting.svg" alt="Setting" class="dropdown-icon"><a href="#">Setting</a></li>
+                <li><img src="../img/logout.svg" alt="LogOut" class="dropdown-icon"><a href="#">LogOut</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--    <div class="sign-up">-->
+    <!--        <button><a href="../pages/authorization.html">Sign Up</a></button>-->
+    <!--        <button class="login"><a href="../pages/authorization.html">Log In</a></button>-->
+    <!--    </div>-->
+
+
+</div>
+<div class="main-container">
+    <div class="sign-in-container">
+        <h2>Sign in to your account</h2>
+        <form>
+            <div class="input-container">
+                <label for="email">Email or Username</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email or username" class="input-field">
+            </div>
+            <div class="input-container">
+                <label for="role">Authority</label>
+                <select class="role-for-registration input-field" id="role">
+                    <option value="" disabled selected>Select the authority</option>
+                    <option value="option1">1</option>
+                    <option value="option2">2</option>
+                    <option value="option3">3</option>
+                    <option value="option4">4</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" class="input-field">
+                <p class="forgot-password"><a href="#">Forgot password?</a></p>
+            </div>
+            <button class="sign-in-btn">Sign In</button>
+            <p class="no-account">Don't have an account?</p>
+            <button class="sign-up-btn">Sign Up</button>
+        </form>
+    </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>
