@@ -5,8 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
     likeButton.addEventListener('click', function () {
         dropdownItems.classList.toggle('open');
     });
-});
 
+    document.addEventListener('click', function(event) {
+        const targetElement = event.target;
+        if (!dropdownItems.contains(targetElement) && !likeButton.contains(targetElement)) {
+            dropdownItems.classList.remove('open');
+        }
+    });
+});
 
 const quantityInputs = document.querySelectorAll('.quantity-count');
 const increaseBtns = document.querySelectorAll('.plus');
