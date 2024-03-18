@@ -11,7 +11,6 @@
     <script src="js/index.js" defer></script>
 </head>
 <body>
-
 <div class="navbar">
     <div class="logo">
         <div class="logo-img-text">
@@ -65,89 +64,146 @@
 
 
 </div>
-<div class="main-container">
+<div class="main-container main-container-catalog">
 
-    <div class="all-products">All Products</div>
-    <div class="product-container">
-        <div class="product-card">
-            <a href="pages/item_page.html"><img src="img/card_item1.png" alt="Product Image"></a>
-            <a href="pages/item_page.html"><p>Brand: Brand 1</p></a>
-            <a href="pages/item_page.html"><p>Product Name</p></a>
-            <p class="price">$50</p>
-        </div>
-        <div class="product-card">
-            <img src="img/card_item2.png" alt="Product Image">
-            <p>Brand: Brand 2</p>
-            <p>Product Name</p>
-             <p class="price">$60</p>
-        </div>
-        <div class="product-card">
-            <img src="img/card_item3.png" alt="Product Image">
-            <p>Brand: Brand 2</p>
-            <p>Product Name</p>
-             <p class="price">$60</p>
-        </div>
-        <div class="product-card">
-            <img src="img/card_item4.png" alt="Product Image">
-            <p>Brand: Brand 2</p>
-            <p>Product Name</p>
-             <p class="price">$60</p>
-        </div>
+    <!-- Filter Section -->
+    <div class="catalog-grid-container">
+        <div class="catalog-left-side">
+            <h2 class="all-products">Filters</h2>
+                <div class="filter-section">
+                    <div class="filter">
+                        <div class="form-group-filter">
+                            <label for="min-price">$ Min</label>
+                            <input type="number" id="min-price" name="min-price" class="min-max-price">
+                        </div>
+                        <div class="form-group-filter">
+                            <label for="max-price">$ Max</label>
+                            <input type="number" id="max-price" name="max-price" class="min-max-price">
+                        </div>
+                        <div class="form-group-filter">
+                            <label>Sort by Price</label>
+                            <div class="checkbox-group">
+                                <label for="price-desc" class="checkbox-label">
+                                    <input type="radio" id="price-desc" name="price-sort" value="price-asc">
+                                    High to Low
+                                </label>
+                                <label for="price-asc" class="checkbox-label">
+                                    <input type="radio" id="price-asc" name="price-sort" value="price-desc">
+                                    Low to High
+                                </label>
+                                <label for="price-none" class="checkbox-label">
+                                    <input type="radio" id="price-none" name="price-sort" value="price-none" checked>
+                                    None
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group-filter">
+                            <label>Sort by Name</label>
+                            <div class="checkbox-group">
+                                <label for="size-asc" class="checkbox-label">
+                                    <input type="radio" id="size-asc" name="size-sort" value="asc">
+                                    A to Z
+                                </label>
+                                <label for="size-desc" class="checkbox-label">
+                                    <input type="radio" id="size-desc" name="size-sort" value="desc">
+                                    Z to A
+                                </label>
+                                <label for="size-none" class="checkbox-label">
+                                    <input type="radio" id="size-none" name="size-sort" value="none" checked>
+                                    None
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group-filter">
+                            <button class="filter-submit">Filter</button>
+                        </div>
+                    </div>
+                    <div class="total-pages">Total number of pages is <span id="total-pages">x</span></div>
+                </div>
+            </div>
+        <div class="catalog-right-side">
+            <h2 class="all-products">All products</h2>
+            <div class="product-container">
+                    <div class="product-card">
+                        <a href="pages/item_page.html"><img src="img/card_item1.png" alt="Product Image"></a>
+                        <a href="pages/item_page.html"><p>Brand: Brand 1</p></a>
+                        <a href="pages/item_page.html"><p>Product Name</p></a>
+                        <p class="price">$50</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/card_item2.png" alt="Product Image">
+                        <p>Brand: Brand 2</p>
+                        <p>Product Name</p>
+                         <p class="price">$60</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/card_item3.png" alt="Product Image">
+                        <p>Brand: Brand 2</p>
+                        <p>Product Name</p>
+                         <p class="price">$60</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/card_item4.png" alt="Product Image">
+                        <p>Brand: Brand 2</p>
+                        <p>Product Name</p>
+                         <p class="price">$60</p>
+                    </div>
 
-        <div class="product-card">
-            <img src="img/card_item1.png" alt="Product Image">
-            <p>Brand: Brand 1</p>
-            <p>Product Name</p>
-            <p class="price">$50</p>
-        </div>
-        <div class="product-card">
-            <img src="img/card_item2.png" alt="Product Image">
-            <p>Brand: Brand 2</p>
-            <p>Product Name</p>
-             <p class="price">$60</p>
-        </div>
-        <div class="product-card">
-            <img src="img/card_item3.png" alt="Product Image">
-            <p>Brand: Brand 2</p>
-            <p>Product Name</p>
-             <p class="price">$60</p>
-        </div>
-        <div class="product-card">
-            <img src="img/card_item4.png" alt="Product Image">
-            <p>Brand: Brand 2</p>
-            <p>Product Name</p>
-             <p class="price">$60</p>
-        </div>
+                    <div class="product-card">
+                        <img src="img/card_item1.png" alt="Product Image">
+                        <p>Brand: Brand 1</p>
+                        <p>Product Name</p>
+                        <p class="price">$50</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/card_item2.png" alt="Product Image">
+                        <p>Brand: Brand 2</p>
+                        <p>Product Name</p>
+                         <p class="price">$60</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/card_item3.png" alt="Product Image">
+                        <p>Brand: Brand 2</p>
+                        <p>Product Name</p>
+                         <p class="price">$60</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/card_item4.png" alt="Product Image">
+                        <p>Brand: Brand 2</p>
+                        <p>Product Name</p>
+                         <p class="price">$60</p>
+                    </div>
 
-        <div class="product-card">
-            <img src="img/card_item1.png" alt="Product Image">
-            <p>Brand: Brand 1</p>
-            <p>Product Name</p>
-            <p class="price">$50</p>
-        </div>
-        <div class="product-card">
-            <img src="img/card_item2.png" alt="Product Image">
-            <p>Brand: Brand 2</p>
-            <p>Product Name</p>
-             <p class="price">$60</p>
-        </div>
-        <div class="product-card">
-            <img src="img/card_item3.png" alt="Product Image">
-            <p>Brand: Brand 2</p>
-            <p>Product Name</p>
-             <p class="price">$60</p>
-        </div>
-        <div class="product-card">
-            <img src="img/item_page.png" alt="Product Image">
-            <p>Brand: Brand 2</p>
-            <p>Product Name</p>
-             <p class="price">$60</p>
-        </div>
+                    <div class="product-card">
+                        <img src="img/card_item1.png" alt="Product Image">
+                        <p>Brand: Brand 1</p>
+                        <p>Product Name</p>
+                        <p class="price">$50</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/card_item2.png" alt="Product Image">
+                        <p>Brand: Brand 2</p>
+                        <p>Product Name</p>
+                         <p class="price">$60</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/card_item3.png" alt="Product Image">
+                        <p>Brand: Brand 2</p>
+                        <p>Product Name</p>
+                         <p class="price">$60</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/item_page.png" alt="Product Image">
+                        <p>Brand: Brand 2</p>
+                        <p>Product Name</p>
+                         <p class="price">$60</p>
+                    </div>
+                </div>
+            </div>
     </div>
-
     <div class="pagination">
         <img src="img/left_arrow.png" alt="left-arrow"/>
-        <a href="#" class="active">1</a>
+        <input type="number" step="1" min="1" id="num_count" name="quantity" value="1" title="Кол." class="input-text qty text" size="4" />
         <img src="img/right_arrow.png" alt="right-arrow"/>
     </div>
 </div>

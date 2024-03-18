@@ -239,6 +239,23 @@ a {
     background-color: var(--button-color);
 }
 
+.pagination input {
+    background-color: transparent;
+    border: 1px solid var(--search-text-color);
+    border-radius: 12px;
+    width: 54px;
+    height: 20px;
+    text-align: center;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
 
 /* Стили для основного контейнера */
 
@@ -246,6 +263,147 @@ a {
     margin-left: 160px;
     margin-right: 160px;
 }
+
+/* Filter Section Styles */
+.catalog-grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-bottom: 20px;
+}
+
+.form-group-filter .min-max-price {
+    width: 259px;
+    height: 54px;
+    border-radius: 12px;
+    padding: 0 0 0 16px;
+    background: var(--search-color);
+    /*border: 1px solid var(--search-text-color);*/
+    border: none;
+    outline: none;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    background: transparent;
+    border: 1px solid var(--search-text-color);
+    border-radius: 12px;
+    width: 273px;
+    height: 54px;
+    text-align: center;
+}
+
+.checkbox-group {
+    --background: #ffffff;
+    border-radius: var(--text-color);
+    color: var(--text-color);
+}
+label {
+    cursor: pointer;
+}
+
+input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        position: relative;
+        height: 20px;
+        width: 20px;
+        outline: none;
+        margin: 16px 15px 15px 15px;
+        cursor: pointer;
+        border: 2px solid var(--line-color);
+        background: transparent;
+        border-radius: 50%;
+        display: grid;
+        justify-self: end;
+        justify-items: center;
+        align-items: center;
+        overflow: hidden;
+        transition: border .5s ease;
+        &::before,
+        &::after {
+            content: "";
+            display: flex;
+            justify-self: center;
+            border-radius: 50%;
+        }
+        &::before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--background);
+            z-index: 1;
+            opacity: var(--opacity, 1);
+        }
+        &::after {
+            position: relative;
+            width: calc(100% /2);
+            height: calc(100% /2);
+            background: var(--search-text-color);
+            top: var(--y, 100%);
+            transition: top .5s cubic-bezier(0.48, 1.97, 0.5, 0.63);
+        }
+        &:checked {
+            --radio: var(--search-text-color);
+            &::after {
+                --y: 0%;
+                animation: stretch-animate .3s ease-out .17s;
+            }
+            &::before {
+                --opacity: 0;
+            }
+            ~ input[type="radio"] {
+                &::after {
+                    --y: -100%;
+                }
+            }
+        }
+        &:not(:checked) {
+            &::before {
+                --opacity: 1;
+                transition: opacity 0s linear .5s;
+            }
+        }
+}
+
+.form-group-filter {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.form-group-filter label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.filter-submit {
+    padding: 8px 16px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filter-submit:hover {
+    background-color: var(--search-color);
+}
+
+/* Total Pages Display Styles */
+.total-pages {
+    font-size: 16px;
+    color: #876363;
+}
+
 
 .all-products {
     margin-top: 40px;
@@ -1238,6 +1396,7 @@ p {
 }
 
 .product-manage-left-section input[type="text"],
+.product-manage-left-section input[type="date"],
 .product-manage-left-section select {
     padding: 8px;
     border: 1px solid #ccc;
@@ -1290,14 +1449,48 @@ p {
     color: var(--text-color);
 }
 
+.status-text p, .processed-text p {
+    background-color: var(--button-color);
+    color: white;
+    padding: 6px;
+    border-radius: 20px;
+    width: 220px;
+    text-align: center;
+}
+
 
 /*Medias requests*/
 
+@media (max-width: 1440px) {
 
-@media (max-width: 1024px) {
+    .catalog-grid-container {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        margin-bottom: 20px;
+    }
+
+    .main-container-catalog {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+
+@media (max-width: 1260px) {
 
     .product-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalog-grid-container {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        margin-bottom: 20px;
+    }
+
+    .main-container-catalog {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
@@ -1473,6 +1666,12 @@ p {
     .center-content img {
         width: 535px;
         height: auto;
+    }
+
+    .catalog-grid-container {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        margin-bottom: 20px;
     }
 
 }
