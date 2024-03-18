@@ -38,6 +38,10 @@ a {
     margin-bottom: 20px;
 }
 
+.burger-menu {
+    display: none;
+}
+
 .navbar-item .logo, .navbar .logo {
     margin-top: 20px;
 }
@@ -247,6 +251,7 @@ a {
     height: 20px;
     text-align: center;
     outline: none;
+    margin-bottom: 20px;
 }
 
 input::-webkit-outer-spin-button,
@@ -297,6 +302,10 @@ input::-webkit-inner-spin-button {
     width: 273px;
     height: 54px;
     text-align: center;
+}
+
+.mobile-button-filter {
+    display: none;
 }
 
 .checkbox-group {
@@ -1461,8 +1470,7 @@ p {
 
 /*Medias requests*/
 
-@media (max-width: 1440px) {
-
+@media (max-width: 1919px) {
     .catalog-grid-container {
         display: grid;
         grid-template-columns: 25% 75%;
@@ -1492,6 +1500,196 @@ p {
         margin-left: 20px;
         margin-right: 20px;
     }
+}
+
+@media (max-width: 768px) {
+    .catalog-left-side {
+        display: none;
+    }
+
+    .catalog-grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .catalog-right-side {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .mobile-button-filter {
+        display: block;
+        margin-top: 34px;
+    }
+
+    .filter-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .burger-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--body-color);
+        color: white;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 20px;
+        z-index: 999;
+
+    }
+
+    .burger-menu-open {
+        overflow: hidden;
+    }
+
+
+    /*body.burger-menu-open {*/
+    /*    overflow: hidden;*/
+    /*}*/
+
+    .sort-by-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sort-by {
+        margin-top: 40px;
+        margin-left: 10px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: var(--text-color);
+    }
+
+    .checkbox-group-mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .checkbox-label {
+        margin-bottom: 10px;
+    }
+
+    .price-range {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: start;
+    }
+
+    .apply-button-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .apply-button {
+        position: absolute;
+        padding: 10px 20px;
+        background-color: #d5871e;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        bottom: 20px;
+        width: 80%;
+    }
+
+    .apply-button:hover {
+        background-color: #b66b15;
+    }
+
+
+    label.check-mobile {
+        cursor: pointer;
+    }
+
+    label.check-mobile input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    label.check-mobile span {
+        margin: 0 12px 12px 12px ;
+        padding: 11px;
+        width: 138px;
+        height: 21px;
+        border: 1px solid var(--search-text-color);
+        display: block;
+        text-align: start;
+        color: var(--text-color);
+        border-radius: 12px;
+        font-size: 14px;
+    }
+
+    label.check-mobile input:checked + span {
+        border-color: var(--button-color);
+        background-color: var(--button-color);
+        color: #fff;
+    }
+
+    .checkbox-group-mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        margin-right: 40px;
+    }
+
+
+    .min-max-mobile {
+        flex-direction: row;
+        align-items: start;
+        margin-right: 40px;
+    }
+
+    .min-max-mobile input {
+        padding: 15px 15px 15px 15px;
+        margin-left: 16px;
+        width: 137px;
+        height: 22px;
+        border-radius: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+    }
+
+    .burger-menu .navbar-item-burger {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    .navbar-item-burger .back-arrow {
+        margin-left: 30px;
+        width: 24px;
+        height: 24px;
+        font-weight: bold;
+        margin-top: 21px;
+    }
+
+    .burger-menu .logo {
+        margin-top: 22px;
+        align-items: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 30px;
+    }
+
 }
 
 @media (max-width: 940px) {
@@ -1666,12 +1864,6 @@ p {
     .center-content img {
         width: 535px;
         height: auto;
-    }
-
-    .catalog-grid-container {
-        display: grid;
-        grid-template-columns: 10% 90%;
-        margin-bottom: 20px;
     }
 
 }

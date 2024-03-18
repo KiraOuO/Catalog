@@ -34,5 +34,23 @@ decreaseBtns.forEach((btn, index) => {
 });
 
 
+document.querySelector('.mobile-button-filter').addEventListener('click', function() {
+    let burgerMenu = document.getElementById('burgerMenu');
+    burgerMenu.style.display = 'flex';
+    document.body.classList.add('burger-menu-open');
+    // Скрытие скролла при открытии меню
+    document.body.style.overflow = 'hidden';
+});
+
+document.querySelector('.burger-menu').addEventListener('click', function(event) {
+    if (event.target === this) {
+        this.style.display = 'none';
+        document.body.classList.remove('burger-menu-open');
+        // Восстановление скролла при закрытии меню
+        document.body.style.overflow = 'auto';
+    }
+});
+
+
 
 

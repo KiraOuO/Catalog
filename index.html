@@ -122,7 +122,56 @@
                 </div>
             </div>
         <div class="catalog-right-side">
-            <h2 class="all-products">All products</h2>
+            <div class="filter-mobile">
+                <h2 class="all-products">All products</h2>
+                <button class="cart-button mobile-button-filter">
+                    <img src="img/funnel.svg" alt="cart-button">
+                </button>
+                <div class="burger-menu" id="burgerMenu">
+                    <div class="navbar-item-burger">
+                        <a href="index.html" class="arrow"><img src="../img/back_arrow.png" alt="Back" class="back-arrow"></a>
+                        <div class="logo">
+                            <div class="logo-img-text">
+                                Filter
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sort-by-container">
+                        <div class="sort-by">Sort by</div>
+                        <div class="checkbox-group-mobile">
+                            <label class="check-mobile">
+                                <input type="checkbox" checked>
+                                <span>Price: Low to High</span>
+                            </label>
+
+                            <label class="check-mobile">
+                                <input type="checkbox">
+                                <span>Price: High to Low</span>
+                            </label>
+
+                            <label class="check-mobile">
+                                <input type="checkbox">
+                                <span>Alphabetically, A-Z</span>
+                            </label>
+
+                            <label class="check-mobile">
+                                <input type="checkbox">
+                                <span>Alphabetically, Z-A</span>
+                            </label>
+                        </div>
+                        <div class="sort-by">Price range</div>
+                    </div>
+                    <div class="price-range">
+                        <div class="min-max-mobile">
+                            <input type="number" id="min-price" name="min-price" placeholder="Min">
+                            <input type="number" id="max-price" name="max-price" placeholder="Max">
+                        </div>
+                    </div>
+                    <div class="apply-button-container">
+                        <button class="apply-button">Apply</button>
+                    </div>
+                </div>
+            </div>
             <div class="product-container">
                     <div class="product-card">
                         <a href="pages/item_page.html"><img src="img/card_item1.png" alt="Product Image"></a>
@@ -205,6 +254,7 @@
         <img src="img/left_arrow.png" alt="left-arrow"/>
         <input type="number" step="1" min="1" id="num_count" name="quantity" value="1" title="Кол." class="input-text qty text" size="4" />
         <img src="img/right_arrow.png" alt="right-arrow"/>
+        <div class="total-pages mobile-button">Total number of pages is <span id="total-pages">x</span></div>
     </div>
 </div>
 </body>
