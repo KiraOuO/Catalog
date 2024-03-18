@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product management</title>
+    <link href="../styles/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../js/index.js" defer></script>
+</head>
+<body>
+<div class="navbar-item">
+    <a href="../index.html" class="arrow"><img src="../img/back_arrow.png" alt="Back" class="back-arrow"></a>
+    <div class="logo">
+        <div class="logo-img-text">
+            <img src="../img/gts_logo.png" alt="logo">
+        </div>
+        <div class="search-item">
+            <img src="../img/search.png" alt="search-icon">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+    <div class="top-button">
+        <!--        Mobile Button-->
+
+        <button class="cart-button mobile-button">
+            <img src="../img/home.svg" alt="cart-button">
+        </button>
+
+
+        <button class="cart-button">
+            <img src="../img/cart.svg" alt="cart-button">
+        </button>
+
+
+        <!--        Mobile Button-->
+
+        <button class="cart-button">
+            <img src="../img/contact_us.svg" alt="cart-button">
+        </button>
+
+
+        <button class="like-button cart-button">
+            <img src="../img/account.svg" alt="like-button">
+        </button>
+        <div class="dropdown">
+            <ul class="dropdown__items">
+                <li><img src="../img/setting.svg" alt="Setting" class="dropdown-icon"><a href="#">Setting</a></li>
+                <li><img src="../img/logout.svg" alt="LogOut" class="dropdown-icon"><a href="#">LogOut</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--    <div class="sign-up">-->
+    <!--        <button><a href="../pages/authorization.html">Sign Up</a></button>-->
+    <!--        <button class="login"><a href="../pages/authorization.html">Log In</a></button>-->
+    <!--    </div>-->
+
+</div>
+<div class="main-container">
+    <div class="product-manage-grid-container">
+        <div class="product-manage-left-section">
+            <div>
+                <h2>Order #1234</h2>
+                <p>Ordered on 2022-03-12</p>
+            </div>
+            <form>
+                <div class="product-manage-input-container">
+                    <label for="ordered-date">Date ordered</label>
+                    <input type="text" id="ordered-date" name="total-price" readonly placeholder="2022-03-12">
+                </div>
+                <div class="product-manage-input-container">
+                    <label for="arrival-date">Arrival date</label>
+                    <input type="text" id="arrival-date" name="arrival-date" class="flatpickr-input">
+                </div>
+                <div class="product-manage-input-container">
+                    <label for="total-price">Total price</label>
+                    <input type="text" id="total-price" name="total-price" readonly placeholder="$120.00">
+                </div>
+                <div class="product-manage-input-container">
+                    <label for="final-price">Final price</label>
+                    <input type="text" id="final-price" name="final-price">
+                </div>
+                <div class="product-manage-input-container">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option value="" disabled selected>Select status</option>
+                        <option value="option1">Ordered</option>
+                        <option value="option2">Shipped</option>
+                        <option value="option3">Out for delivery</option>
+                        <option value="option4">Delivered</option>
+                    </select>
+                </div>
+                <div class="product-manage-button-container">
+                    <button type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+        <div class="product-manage-right-section">
+            <h2>Product</h2>
+            <div class="product-manage-item-card-container">
+                <div class="product-manage-card">
+                    <img src="../img/item_page.png" alt="Product Image" class="product-image-card">
+                    <div class="product-card-description">
+                        <p class="product-name">Hermes Un Jardindadadadadadadadadadad</p>
+                        <div class="decoration-text">
+                            <p class="gtin-number">123456789</p>
+                            <p class="price-cart">$19.99</p>
+                            <p class="quantity-text">Quantity: 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-manage-item-card-container">
+                <div class="product-manage-card">
+                    <img src="../img/item_page.png" alt="Product Image" class="product-image-card">
+                    <div class="product-card-description">
+                        <p class="product-name">Hermes Un Jardindadadadadadadadadadad</p>
+                        <div class="decoration-text">
+                            <p class="gtin-number">123456789</p>
+                            <p class="price-cart">$19.99</p>
+                            <p class="quantity-text">Quantity: 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Shipping address</h2>
+                <p>123 Shipping Address Street,</p>
+                <p>City, State, Zip Code</p>
+            </div>
+            <div>
+                <h2>Email</h2>
+                <p>example@example.com</p>
+            </div>
+            <div>
+                <h2>Status</h2>
+                <div class="product-manage-item-card-container-status">
+                    <div class="product-manage-card">
+                        <div class="order-history-img-container">
+                            <img src="../img/order_history.png" alt="Product Image" class="order-history-img">
+                        </div>
+                        <div class="cart-description">
+                            <p class="product-name">Standard Shipping</p>
+                            <div class="decoration-text">
+                                <p class="price-cart order-history-description">Arrives Jul 14 - Jul 15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
