@@ -138,26 +138,23 @@
                     </div>
                     <div class="sort-by-container">
                         <div class="sort-by">Sort by</div>
-                        <div class="checkbox-group-mobile">
-                            <label class="check-mobile">
-                                <input type="checkbox" checked>
-                                <span>Price: Low to High</span>
-                            </label>
-
-                            <label class="check-mobile">
-                                <input type="checkbox">
-                                <span>Price: High to Low</span>
-                            </label>
-
-                            <label class="check-mobile">
-                                <input type="checkbox">
-                                <span>Alphabetically, A-Z</span>
-                            </label>
-
-                            <label class="check-mobile">
-                                <input type="checkbox">
-                                <span>Alphabetically, Z-A</span>
-                            </label>
+                        <div class="checkbox-group">
+                            <div class="form-group-filter">
+                                <div class="checkbox-group">
+                                    <label for="price-desc-mobile" class="checkbox-label">
+                                        <input type="radio" id="price-desc-mobile" name="price-sort" value="price-asc">
+                                        High to Low
+                                    </label>
+                                    <label for="price-asc-mobile" class="checkbox-label">
+                                        <input type="radio" id="price-asc-mobile" name="price-sort" value="price-desc">
+                                        Low to High
+                                    </label>
+                                    <label for="price-none-mobile" class="checkbox-label">
+                                        <input type="radio" id="price-none-mobile" name="price-sort" value="price-none" checked>
+                                        None
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                         <div class="sort-by">Price range</div>
                     </div>

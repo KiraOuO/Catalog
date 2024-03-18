@@ -313,6 +313,7 @@ input::-webkit-inner-spin-button {
     border-radius: var(--text-color);
     color: var(--text-color);
 }
+
 label {
     cursor: pointer;
 }
@@ -1582,7 +1583,8 @@ p {
     .price-range {
         display: flex;
         margin-bottom: 20px;
-        align-items: start;
+        justify-content: center;
+        text-align: center;
     }
 
     .apply-button-container {
@@ -1643,7 +1645,7 @@ p {
     .checkbox-group-mobile {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
         margin-bottom: 10px;
         flex-wrap: wrap;
         margin-right: 40px;
@@ -1652,7 +1654,7 @@ p {
 
     .min-max-mobile {
         flex-direction: row;
-        align-items: start;
+        align-items: center;
         margin-right: 40px;
     }
 
@@ -1664,6 +1666,8 @@ p {
         border-radius: 12px;
         flex-wrap: wrap;
         margin-bottom: 16px;
+        outline: none;
+        border: 1px solid var(--search-text-color);
     }
 
     .burger-menu .navbar-item-burger {
@@ -2045,6 +2049,10 @@ p {
         width: 302px;
     }
 
+    .min-max-mobile input {
+        width: 243px;
+    }
+
 }
 
 @media (min-width: 375px) and (max-width: 425px){
@@ -2088,6 +2096,10 @@ p {
 
     .role-for-registration {
         width: 362px;
+    }
+
+    .min-max-mobile input {
+        width: 243px;
     }
 
 }
@@ -2169,6 +2181,10 @@ p {
 
     .role-for-registration {
         width: 266px;
+    }
+
+    .min-max-mobile input {
+        width: 228px;
     }
 
 
