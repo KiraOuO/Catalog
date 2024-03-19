@@ -28,10 +28,14 @@
             <img src="img/home.svg" alt="cart-button">
         </button>
 
-
         <button class="cart-button">
             <img src="img/cart.svg" alt="cart-button">
         </button>
+
+        <button class="cart-button mobile-button-filter">
+            <img src="img/funnel.svg" alt="cart-button">
+        </button>
+
 
 
         <!--        Mobile Button-->
@@ -69,8 +73,8 @@
     <!-- Filter Section -->
     <div class="catalog-grid-container">
         <div class="catalog-left-side">
-            <h2 class="all-products">Filters</h2>
                 <div class="filter-section">
+                    <h2 class="all-products">Filters</h2>
                     <div class="filter">
                         <div class="form-group-filter">
                             <label for="min-price">$ Min</label>
@@ -124,9 +128,6 @@
         <div class="catalog-right-side">
             <div class="filter-mobile">
                 <h2 class="all-products">All products</h2>
-                <button class="cart-button mobile-button-filter">
-                    <img src="img/funnel.svg" alt="cart-button">
-                </button>
                 <div class="burger-menu" id="burgerMenu">
                     <div class="navbar-item-burger">
                         <a href="index.html" class="arrow"><img src="../img/back_arrow.png" alt="Back" class="back-arrow"></a>
@@ -248,10 +249,18 @@
             </div>
     </div>
     <div class="pagination">
+        <div class="page-number">
+            <input type="number" step="1" min="1" id="num_count-first" name="quantity" value="1" title="Кол." class="input-text qty text page-number" size="4" readonly/>
+        </div>
         <img src="img/left_arrow.png" alt="left-arrow"/>
         <input type="number" step="1" min="1" id="num_count" name="quantity" value="1" title="Кол." class="input-text qty text" size="4" />
         <img src="img/right_arrow.png" alt="right-arrow"/>
-        <div class="total-pages mobile-button">Total number of pages is <span id="total-pages">x</span></div>
+        <div class="page-number">
+            <input type="number" step="1" min="1" id="num_count-last" name="quantity" value="4000" title="Кол." class="input-text qty text" size="4" readonly/>
+        </div>
+    </div>
+    <div class="total-pages-mobile-container">
+        <div class="total-pages-mobile">Total number of pages is <span id="total-pages">x</span></div>
     </div>
 </div>
 </body>
