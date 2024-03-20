@@ -12,15 +12,44 @@
 </head>
 <body>
 <div class="navbar">
+
+    <div class="logo-mobile">
+        <div class="logo-img-text-mobile">
+            <img src="img/GTSLogo.png" alt="logo">
+        </div>
+    </div>
+
+    <div class="logo-mobile">
+        <div class="search-mobile-container">
+            <button class="cart-button mobile-button search-mobile-button">
+                <img src="img/search.png" alt="search-icon">
+            </button>
+        </div>
+    </div>
+
+    <div class="search-menu" id="search_menu">
+        <div class="sort-by-container">
+            <div class="checkbox-group">
+                <div class="search-responsive-menu">
+                    <img src="img/search.png" alt="search-icon">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="black-back"></div>
+
     <div class="logo">
         <div class="logo-img-text">
-            <img src="img/gts_logo.png" alt="logo">
+            <img src="img/GTSLogo.png" alt="logo">
         </div>
+
         <div class="search">
             <img src="img/search.png" alt="search-icon">
             <input type="text" placeholder="Search...">
         </div>
     </div>
+
     <div class="top-button">
 <!--        Mobile Button-->
 
@@ -249,6 +278,7 @@
             </div>
     </div>
     <div class="pagination">
+        <form>
         <div class="page-number">
             <input type="number" step="1" min="1" id="num_count-first" name="quantity" value="1" title="Кол." class="input-text qty text page-number" size="4" readonly/>
         </div>
@@ -258,6 +288,7 @@
         <div class="page-number">
             <input type="number" step="1" min="1" id="num_count-last" name="quantity" value="4000" title="Кол." class="input-text qty text" size="4" readonly/>
         </div>
+        </form>
     </div>
     <div class="total-pages-mobile-container">
         <div class="total-pages-mobile">Total number of pages is <span id="total-pages">x</span></div>
