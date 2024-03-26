@@ -114,6 +114,10 @@
                             <input type="number" id="max-price" name="max-price" class="min-max-price">
                         </div>
                         <div class="form-group-filter">
+                            <label for="brand-name">Brand</label>
+                            <input type="text" id="brand-name" name="brand-name" class="min-max-price">
+                        </div>
+                        <div class="form-group-filter">
                             <label>Sort by Price</label>
                             <div class="checkbox-group">
                                 <label for="price-desc" class="checkbox-label">
@@ -131,22 +135,23 @@
                             </div>
                         </div>
                         <div class="form-group-filter">
-                            <label>Sort by Name</label>
+                            <label>Sort by Price</label>
                             <div class="checkbox-group">
-                                <label for="size-asc" class="checkbox-label">
-                                    <input type="radio" id="size-asc" name="size-sort" value="asc">
-                                    A to Z
+                                <label for="price-desc" class="checkbox-label">
+                                    <input type="radio" id="price-desc" name="price-sort" value="price-asc">
+                                    High to Low
                                 </label>
-                                <label for="size-desc" class="checkbox-label">
-                                    <input type="radio" id="size-desc" name="size-sort" value="desc">
-                                    Z to A
+                                <label for="price-asc" class="checkbox-label">
+                                    <input type="radio" id="price-asc" name="price-sort" value="price-desc">
+                                    Low to High
                                 </label>
-                                <label for="size-none" class="checkbox-label">
-                                    <input type="radio" id="size-none" name="size-sort" value="none" checked>
+                                <label for="price-none" class="checkbox-label">
+                                    <input type="radio" id="price-none" name="price-sort" value="price-none" checked>
                                     None
                                 </label>
                             </div>
                         </div>
+
                         <div class="form-group-filter">
                             <button class="filter-submit">Filter</button>
                         </div>
@@ -192,6 +197,11 @@
                         <div class="min-max-mobile">
                             <input type="number" id="min-price" name="min-price" placeholder="Min">
                             <input type="number" id="max-price" name="max-price" placeholder="Max">
+                        </div>
+                    </div>
+                    <div class="price-range">
+                        <div class="min-max-mobile">
+                            <input type="text" id="brand-name" name="max-price" placeholder="Brand">
                         </div>
                     </div>
                     <div class="apply-button-container">
